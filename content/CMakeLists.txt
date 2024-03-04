@@ -11,7 +11,10 @@ qt6_add_qml_module(content
 
         Slide.ui.qml
         ScreenBack.ui.qml
+         ButtinItem.ui.qml
     RESOURCES
         fonts/fonts.txt
-        RESOURCES image/back.jpeg
+        image/back.jpeg
+        image/buttonItem.PNG
+
 )

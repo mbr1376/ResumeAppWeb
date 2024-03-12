@@ -6,6 +6,7 @@ Item {
         id: back
         anchors.fill: parent
         source: "image/back.jpeg"
+        opacity: 0.7
 
     }
 //     Screen01 {

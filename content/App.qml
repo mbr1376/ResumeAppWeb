@@ -10,6 +10,7 @@ Window {
 
     visible: true
     title: "ResumeApp"
+
     ScreenBack{
         id:backgrand
         anchors.fill: parent
@@ -21,6 +22,16 @@ Window {
         anchors.left: parent.left
         width: parent.width/8
         height: parent.height
+    }
+    Frame{
+        id:frame
+        anchors.left: slide.right
+        anchors.leftMargin: 20
+        width: parent.width - slide.width - 10
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        //height: parent.height
+
     }
 
 }

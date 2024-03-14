@@ -33,6 +33,12 @@ Window {
         //height: parent.height
 
     }
+    Connections{
+        target: slide
+        onAboutClicked: frame.currentframe =0
+        onSkillClicked: frame.currentframe = 1
+        onWorkerClicked: frame.currentframe = 2
+    }
 
 }
 

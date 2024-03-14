@@ -2,6 +2,7 @@ import QtQuick 6.2
 import QtQuick.Controls 6.6
 
 Item {
+    property int currentframe: 0
     Rectangle{
         anchors.fill: parent
         color: "white"
@@ -15,7 +16,7 @@ Item {
             id :view
            anchors.fill: parent
            anchors.margins: 5
-           currentIndex: 0
+           currentIndex: currentframe
            Item {
                id: first
            }

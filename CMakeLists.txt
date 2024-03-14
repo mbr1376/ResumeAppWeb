@@ -13,7 +13,8 @@ if (Qt6_VERSION VERSION_GREATER_EQUAL 6.3)
     qt_standard_project_setup()
 endif()
 
-qt_add_executable(ResumeAppApp src/main.cpp)
+qt_add_executable(ResumeAppApp src/main.cpp
+    src/datajson.h src/datajson.cpp)
 
 qt_add_resources(ResumeAppApp "configuration"
     PREFIX "/"

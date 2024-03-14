@@ -19,5 +19,6 @@ qt6_add_qml_module(content
         image/back.jpeg
         image/buttonItem.PNG
         image/frame.png
+        resume.json
 
 )

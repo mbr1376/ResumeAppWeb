@@ -3,7 +3,7 @@
 
 import QtQuick 6.2
 import ResumeApp
-
+import api 1.0
 Window {
     width: mainScreen.width
     height: mainScreen.height
@@ -38,6 +38,9 @@ Window {
         onAboutClicked: frame.currentframe =0
         onSkillClicked: frame.currentframe = 1
         onWorkerClicked: frame.currentframe = 2
+    }
+    JsonData{
+
     }
 
 }

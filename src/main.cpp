@@ -8,6 +8,7 @@
 #include "import_qml_components_plugins.h"
 #include "import_qml_plugins.h"
 
+#include "datajson.h"
 int main(int argc, char *argv[])
 {
     set_qt_environment();
@@ -15,6 +16,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+    qmlRegisterType<JSON::DataJson>("api",1,0,"JsonData");
     const QUrl url(u"qrc:/qt/qml/Main/main.qml"_qs);
     QObject::connect(
         &engine,

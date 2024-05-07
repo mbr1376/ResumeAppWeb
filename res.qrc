@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resume.json</file>
+        <file>data.json</file>
+    </qresource>
+</RCC>

@@ -1,6 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Controls 6.6
-
+import api 1.0
 Item {
     property int currentframe: 0
     Rectangle{
@@ -20,9 +20,10 @@ Item {
            Item {
                id: first
            }
-           Item {
-               id: secenf
+           Skills{
+
            }
+
            Item{
                id: thread
            }

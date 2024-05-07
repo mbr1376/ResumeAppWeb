@@ -8,17 +8,17 @@ qt6_add_qml_module(content
     RESOURCE_PREFIX "/qt/qml"
     QML_FILES
         App.qml
-
+        Skills.qml
         Slide.ui.qml
         ScreenBack.ui.qml
          ButtinItem.ui.qml
          Frame.ui.qml
+
 
     RESOURCES
         fonts/fonts.txt
         image/back.jpeg
         image/buttonItem.PNG
         image/frame.png
-        resume.json
-
+        image/resume.json
 )

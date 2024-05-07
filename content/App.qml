@@ -39,9 +39,6 @@ Window {
         onSkillClicked: frame.currentframe = 1
         onWorkerClicked: frame.currentframe = 2
     }
-    JsonData{
-
-    }
 
 }
 

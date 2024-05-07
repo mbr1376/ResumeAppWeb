@@ -1,0 +1,25 @@
+{
+   "model": [
+   {
+      "id": 1,
+      "name": "Kambiz",
+      "family": "Asadzadeh"
+   },
+   {
+      "id": 2,
+      "name": "Hamed",
+      "family": "Masafi"
+   },
+   {
+      "id": 3,
+      "name": "Sorush",
+      "family": "Rabiei"
+   },
+   {
+      "id": 4,
+      "name": "Hadi",
+      "family": "Abbasi"
+   }
+   ],
+   "result" : true
+}

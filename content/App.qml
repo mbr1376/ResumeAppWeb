@@ -15,30 +15,19 @@ Window {
         id:backgrand
         anchors.fill: parent
     }
+    // Information{
+    //     id:information
+    //     anchors.left: backgrand.left
+    //     anchors.right: backgrand.right
+    //     anchors.top: backgrand.top
+    //     anchors.leftMargin: 30
+    //     anchors.rightMargin: 30
+    //     anchors.topMargin: 25
 
 
-    Slide{
-        id:slide
-        anchors.left: parent.left
-        width: parent.width/8
-        height: parent.height
-    }
-    Frame{
-        id:frame
-        anchors.left: slide.right
-        anchors.leftMargin: 20
-        width: parent.width - slide.width - 10
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        //height: parent.height
+    // }
 
-    }
-    Connections{
-        target: slide
-        onAboutClicked: frame.currentframe =0
-        onSkillClicked: frame.currentframe = 1
-        onWorkerClicked: frame.currentframe = 2
-    }
+
 
 }
 

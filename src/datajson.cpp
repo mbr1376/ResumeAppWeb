@@ -36,35 +36,36 @@ void DataJson::parse(QString nameModel)
 {
     QString rawData;
     QVariantList finalJson;
-    QFile file;
-    QDir dir(".");
-   qDebug()<<dir.absolutePath();
-    if(fileExists(this->path)){
-        {
-            file.setFileName(this->path);
-            file.open(QIODevice::ReadOnly | QIODevice::Text);
+    QFile file(":/resume.json");
 
-            //Load data from json file!
-            rawData = file.readAll();
+    qDebug()<< file.exists();
 
-            file.close();
+   //  if(fileExists(this->path)){
+   //      {
+   //          file.setFileName(this->path);
+   //          file.open(QIODevice::ReadOnly | QIODevice::Text);
+
+   //          //Load data from json file!
+   //          rawData = file.readAll();
+
+   //          file.close();
 
 
 
-            QJsonDocument document   =   { QJsonDocument::fromJson(rawData.toUtf8()) };
+   //          QJsonDocument document   =   { QJsonDocument::fromJson(rawData.toUtf8()) };
 
-            //Create data as Json object
-            QJsonObject jsonObject = document.object();
+   //          //Create data as Json object
+   //          QJsonObject jsonObject = document.object();
 
-            // Sets number of items in the list as integer.
+   //          // Sets number of items in the list as integer.
 
-            setLenght(jsonObject[nameModel].toArray().count());
+   //          setLenght(jsonObject[nameModel].toArray().count());
 
-            finalJson = json2Variant(jsonObject[nameModel].toArray(), nameModel);
-        }
-        setDataSkillList(finalJson);
-    }else
-        qWarning() << "There is no any file in this path";
+   //          finalJson = json2Variant(jsonObject[nameModel].toArray(), nameModel);
+   //      }
+   //      setDataSkillList(finalJson);
+   //  }else
+   //      qWarning() << "There is no any file in this path";
 }
 
 void DataJson::setDataSkillList(const QVariantList &data)

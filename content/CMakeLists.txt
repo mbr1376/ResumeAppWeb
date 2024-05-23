@@ -13,6 +13,7 @@ qt6_add_qml_module(content
         ScreenBack.ui.qml
          ButtinItem.ui.qml
          Frame.ui.qml
+         Information.ui.qml
 
 
     RESOURCES
@@ -20,5 +21,8 @@ qt6_add_qml_module(content
         image/back.jpeg
         image/buttonItem.PNG
         image/frame.png
-        image/resume.json
+        image/email.png
+        image/phone.png
+        image/person.png
+        image/location.png
 )

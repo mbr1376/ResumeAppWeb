@@ -1,6 +1,7 @@
 // Copyright (C) 2021 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only
 
+#include <QFile>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -14,7 +15,6 @@ int main(int argc, char *argv[])
     set_qt_environment();
 
     QGuiApplication app(argc, argv);
-
     QQmlApplicationEngine engine;
     qmlRegisterType<JSON::DataJson>("api",1,0,"JsonData");
     const QUrl url(u"qrc:/qt/qml/Main/main.qml"_qs);
@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
     engine.addImportPath(":/");
 
     engine.load(url);
-
     if (engine.rootObjects().isEmpty()) {
         return -1;
     }

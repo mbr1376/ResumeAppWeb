@@ -1,12 +1,12 @@
 import QtQuick 6.2
+import ResumeApp
 
 Item {
 
-    Image {
+    Rectangle {
         id: back
         anchors.fill: parent
-        source: "image/back.jpeg"
-        opacity: 0.7
+        color: "#121212"
 
     }
 //     Screen01 {

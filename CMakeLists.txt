@@ -7,7 +7,7 @@ project(ResumeAppApp LANGUAGES CXX)
 
 set(CMAKE_AUTOMOC ON)
 
-find_package(Qt6 6.2 REQUIRED COMPONENTS Core Gui Qml Quick)
+find_package(Qt6 6.2 REQUIRED COMPONENTS Core Gui Qml Quick Core5Compat)
 
 if (Qt6_VERSION VERSION_GREATER_EQUAL 6.3)
     qt_standard_project_setup()
@@ -15,12 +15,15 @@ endif()
 
 qt_add_executable(ResumeAppApp src/main.cpp
     src/datajson.h src/datajson.cpp
-    res.qrc)
+    res.qrc
+)
 
 qt_add_resources(ResumeAppApp "configuration"
     PREFIX "/"
     FILES
         qtquickcontrols2.conf
+        resume.json
+
 )
 
 target_link_libraries(ResumeAppApp PRIVATE
@@ -28,6 +31,7 @@ target_link_libraries(ResumeAppApp PRIVATE
     Qt6::Gui
     Qt6::Qml
     Qt6::Quick
+    Qt6::Core5Compat
 )
 
 if (BUILD_QDS_COMPONENTS)
@@ -50,3 +54,5 @@ install(TARGETS ResumeAppApp
 # make IDEs aware of the QML import path
 set(QML_IMPORT_PATH ${PROJECT_BINARY_DIR}/qml CACHE PATH
     "Path to the custom QML components defined by the project")
+
+ set_target_properties(${target_name} PROPERTIES LINK_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/data.json)

@@ -19,7 +19,7 @@ QtObject {
                                                   pixelSize: Qt.application.font.pixelSize * 1.6
                                               })
 
-    readonly property color backgroundColor: "#EAEAEA"
+    readonly property color backgroundColor: "#121212"
 
 
     property StudioApplication application: StudioApplication {

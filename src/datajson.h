@@ -32,7 +32,7 @@ private:
     QVariantList json2Variant(QJsonArray array, QString nameModel);
     QVariantList m_dataSkillList;
     int m_lenght{0};
-    QString path= "resume.json";
+    QString path= "./resume.json";
 };
 }
 #endif // DATAJSON_H

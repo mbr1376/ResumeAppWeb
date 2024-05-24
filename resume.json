@@ -1,20 +1,16 @@
 {
     "about" :[
         {
-            "readme":[
-                {
-                    "about" : "Hardware and software programming for more than 5 years Writer, researcher in the field of artificial intelligence, active in the fields of computers and hardware digital"
-                }
-            ],
             "information":[
               {
                 "name" : "MohamadBagher",
                 "family" : "Roodsarabi",
-                "age" : 26,
+                "age" : "26",
                 "titel" : "develpoer Software and hardware",
                 "email" : "mbroodsraby76@gmail.com",
                 "phone" : "09398831591" ,
-                "location" : "Tehran"
+                "location" : "Tehran",
+                "about" : "Hardware and software programming for more than 5 years Writer, researcher in the field of artificial intelligence, active in the fields of computers and hardware digital"
 
               }
             ],
@@ -45,18 +41,15 @@
                     "image" : ""
                 }
             ],
-            "social network":[
+            "socialNetwork":[
                 {
-                    "name": "linkdin",
                     "image" : "",
                     "url": "https://www.linkedin.com/in/mohamadbagherroodsarabi/"
                 },{
-                    "name": "telegram",
                     "image" : "",
                     "url":"@ad1mi2n"
 
                 },{
-                    "name": "Gmail",
                     "image" : "",
                     "url": "mbroodsaraby76@gmail.com"
                 }

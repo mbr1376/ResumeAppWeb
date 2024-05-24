@@ -11,18 +11,19 @@ qt6_add_qml_module(content
         Skills.qml
         Slide.ui.qml
         ScreenBack.ui.qml
-         ButtinItem.ui.qml
-         Frame.ui.qml
-         Information.ui.qml
+        ButtinItem.ui.qml
+        Information.ui.qml
+        About.ui.qml
+        ItemSkill.qml
 
 
     RESOURCES
         fonts/fonts.txt
         image/back.jpeg
         image/buttonItem.PNG
-        image/frame.png
         image/email.png
         image/phone.png
         image/person.png
         image/location.png
+        image/person-96.png
 )

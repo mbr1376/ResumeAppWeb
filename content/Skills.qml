@@ -1,46 +1,69 @@
 import QtQuick 6.2
 import api 1.0
+import QtQuick.Studio.Effects 1.0
+import QtQuick.Controls
 Item {
     id: secenf
-    JsonData{
-        id:jsonData
-    }
+    Rectangle {
+        id: backSkill
+        anchors.fill: parent
+        color: "#121212"
+        radius: 10
 
-    ListView {
-        id: listView
-        width: 110
-        height: 160
-        model: ListModel{
-            id:listModel
+        Rectangle {
+            anchors.fill: parent
+            radius: 10
+            color: "#FFFFFF"
+            opacity: 0.2
+
         }
+        ListView {
+            id: listView
+            spacing: 5
+            anchors.fill: backSkill
+            anchors.topMargin: 10
+            anchors.horizontalCenter: parent.horizontalCenter
 
-        delegate: Item {
-            x: 5
-            width: 80
-            height: 40
-            Row {
-                id: row1
-                spacing: 10
-                Rectangle {
-                    width: 40
-                    height: 40
-                    color: "blue"
+            model: ListModel{
+                id:listModel
+                ListElement{
+                    valuel: 1.0
                 }
+                ListElement{
+                    valuel:0.3
+                }
+            }
 
-                Text {
-                    text: name
-                    anchors.verticalCenter: parent.verticalCenter
-                    font.bold: true
-                }
+            delegate: ItemSkill{
+                lineWidth: 3
+                size: 120
+                secondaryColor: "#e0e0e0"
+                primaryColor: "#03DAC6"
+                value: valuel
+                anchors.horizontalCenter: parent.horizontalCenter
             }
         }
     }
-
-    Component.onCompleted: {
-        jsonData.parse("skills")
-        for (var i=0; i<jsonData.lenght;i++){
-            var obj = jsonData.dataSkillList[i]
-            listModel.append({"name":obj.name})
-        }
+    DropShadowEffect{
+        anchors.fill: backSkill
+        source: backSkill
+        horizontalOffset: 2
+        verticalOffset: 1
+        radius: 8
+        samples: 17
+        color: "#aaffffff"
+        spread: 0
     }
+
+    // JsonData{
+    //     id:jsonData
+    // }
+    // Component.onCompleted: {
+    //     jsonData.parse("skills")
+    //     for (var i=0; i<jsonData.lenght;i++){
+    //         var obj = jsonData.dataSkillList[i]
+    //         listModel.append({"name":obj.name})
+    //     }
+    // }
+
 }

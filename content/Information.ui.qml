@@ -20,8 +20,6 @@ Rectangle {
         radius: 10
         border.color: "#000000"
         border.width: 1
-
-
     }
     RowLayout {
         id: row
@@ -44,28 +42,23 @@ Rectangle {
             font.pixelSize: 14
             font.bold: true
         }
-        Rectangle {
-            id: rectangle
-            width: 200
-            height: 30
-            Layout.alignment: Qt.AlignHCenter
-            Layout.alignment: Qt.AlignVCenter
-            color: "transparent"
-            border.color: "#03DAC6"
-            radius: 3
+
             Text {
                 anchors.centerIn: parent.Center
                 id: titel
                 text: _titel
                 color: "#FFFFFF"
+                font.bold: true
+                font.pixelSize: 16
             }
-        }
+
         ColumnLayout {
             id: columnLayout
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.right: parent.right
             anchors.rightMargin: 10
+            Layout.alignment: Qt.AlignVCenter
             width: 200
             RowLayout {
                 Layout.fillWidth: true

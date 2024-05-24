@@ -15,6 +15,7 @@ qt6_add_qml_module(content
         Information.ui.qml
         About.ui.qml
         ItemSkill.qml
+        Link.ui.qml
 
 
     RESOURCES

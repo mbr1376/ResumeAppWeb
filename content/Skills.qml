@@ -26,12 +26,7 @@ Item {
 
             model: ListModel{
                 id:listModel
-                ListElement{
-                    valuel: 1.0
-                }
-                ListElement{
-                    valuel:0.3
-                }
+
             }
 
             delegate: ItemSkill{
@@ -59,11 +54,11 @@ Item {
     //     id:jsonData
     // }
     // Component.onCompleted: {
-    //     jsonData.parse("skills")
-    //     for (var i=0; i<jsonData.lenght;i++){
-    //         var obj = jsonData.dataSkillList[i]
-    //         listModel.append({"name":obj.name})
-    //     }
+    //     jsonData.parse(":/resume.json","about")
+    //     // for (var i=0; i<jsonData.lenght;i++){
+    //     //     var obj = jsonData.dataSkillList[i]
+    //     //     listModel.append({"name":obj.name})
+    //     // }
     // }
 
 }

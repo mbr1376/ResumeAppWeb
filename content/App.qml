@@ -31,6 +31,7 @@ Window {
         anchors.topMargin: 5
         anchors.left: backgrand.left
         anchors.leftMargin: 30
+        height: parent.height / 2
     }
 
    Skills{
@@ -43,6 +44,33 @@ Window {
        anchors.bottomMargin: 5
        width: 150
        height: parent.width - 30
+   }
+   Link{
+       id: link
+       anchors.left: backgrand.left
+       anchors.leftMargin: 30
+       height: parent.height / 3.5
+       anchors.top: about.bottom
+       anchors.topMargin: 10
+   }
+
+   JsonData{
+       id:jsonData
+   }
+   Component.onCompleted: {
+       jsonData.parse(":/resume.json","about")
+        for (var i=0; i<jsonData.lenght;i++){
+           var obj = jsonData.dataSkillList[i]
+           information._Family = obj.family
+           information._name = obj.name
+           information._age = obj.age
+           information._titel = obj.titel
+           information._email = obj.email
+           information._location = obj.location
+           information._phone  =  obj.phone
+           about._aboutME = obj.about
+
+       }
    }
 }
 

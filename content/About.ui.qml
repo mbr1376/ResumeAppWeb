@@ -16,7 +16,6 @@ Item {
             radius: 10
             color: "#FFFFFF"
             opacity: 0.2
-
         }
         Image {
             id: image
@@ -39,9 +38,13 @@ Item {
             color: "#1f1b24"
             Text {
                 anchors.fill: parent
-                anchors.margins: 5
+                anchors.margins: 7
                 text: _aboutME
                 color: "#FFFFFF"
+                wrapMode: Text.WordWrap
+                font.pointSize: 12
+                clip: true
+                elide: Text .ElideLeft
             }
         }
     }
@@ -54,7 +57,5 @@ Item {
         samples: 17
         color: "#aaFFFFFF"
         spread: 0
-
-
     }
 }

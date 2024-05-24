@@ -19,7 +19,7 @@ public:
 
     QVariantList dataSkillList() const;
     int lenght() const;
-    Q_INVOKABLE void parse(QString nameModel);
+    Q_INVOKABLE void parse(QString path,QString nameModel);
 
 public slots:
     void   setDataSkillList(const QVariantList& data);
@@ -30,9 +30,9 @@ signals:
 private:
 
     QVariantList json2Variant(QJsonArray array, QString nameModel);
+    QVariantMap parseInformation2Variant(QJsonArray array);
     QVariantList m_dataSkillList;
     int m_lenght{0};
-    QString path= "./resume.json";
 };
 }
 #endif // DATAJSON_H

@@ -32,40 +32,33 @@ int DataJson::lenght() const
     return m_lenght;
 }
 
-void DataJson::parse(QString nameModel)
+void DataJson::parse(QString path,QString nameModel)
 {
     QString rawData;
     QVariantList finalJson;
-    QFile file(":/resume.json");
+    QFile file(path);
 
-    qDebug()<< file.exists();
-
-   //  if(fileExists(this->path)){
-   //      {
-   //          file.setFileName(this->path);
-   //          file.open(QIODevice::ReadOnly | QIODevice::Text);
-
-   //          //Load data from json file!
-   //          rawData = file.readAll();
-
-   //          file.close();
-
-
-
-   //          QJsonDocument document   =   { QJsonDocument::fromJson(rawData.toUtf8()) };
+     if(fileExists(path)){
+        {
+            file.setFileName(path);
+            file.open(QIODevice::ReadOnly | QIODevice::Text);
+             //Load data from json file!
+             rawData = file.readAll();
+             file.close();
+             QJsonDocument document   =   { QJsonDocument::fromJson(rawData.toUtf8()) };
 
    //          //Create data as Json object
-   //          QJsonObject jsonObject = document.object();
+             QJsonObject jsonObject = document.object();
 
    //          // Sets number of items in the list as integer.
 
-   //          setLenght(jsonObject[nameModel].toArray().count());
+             setLenght(jsonObject[nameModel].toArray().count());
 
-   //          finalJson = json2Variant(jsonObject[nameModel].toArray(), nameModel);
-   //      }
-   //      setDataSkillList(finalJson);
-   //  }else
-   //      qWarning() << "There is no any file in this path";
+            finalJson = json2Variant(jsonObject[nameModel].toArray(), nameModel);
+         }
+         setDataSkillList(finalJson);
+     }else
+         qWarning() << "There is no any file in this path";
 }
 
 void DataJson::setDataSkillList(const QVariantList &data)
@@ -86,22 +79,35 @@ void DataJson::setLenght(int value)
 
 QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
 {
-    QVariantMap modelData;
+    QVariantMap modelDataInformation;
     QVariantList finalJson;
-    if (nameModel == "skills"){
+    if (nameModel == "about"){
         foreach (const QJsonValue &value, array) {
-
-            // Sets value from model as Json object
+             // Sets value from model as Json object
             QJsonObject modelObject = value.toObject();
+            // information json
+            modelDataInformation =parseInformation2Variant(modelObject["information"].toArray());
+            finalJson.append(modelDataInformation);
 
-            modelData.insert("id", modelObject["id"].toInt());
-            modelData.insert("name", modelObject["name"].toString());
-            modelData.insert("value", modelObject["value"].toInt());
-            modelData.insert("image",modelObject["image"].toString());
-
-            // Set model data
-            finalJson.append(modelData);
-        }
+         }
     }
     return finalJson;
+}
+
+QVariantMap DataJson::parseInformation2Variant(QJsonArray array)
+{
+    QVariantMap modelData;
+    foreach (const QJsonValue &value, array) {
+        QJsonObject modelObject = value.toObject();
+        qDebug()<< modelObject["name"].toString();
+            modelData.insert("name", modelObject["name"].toString());
+            modelData.insert("family", modelObject["family"].toString());
+            modelData.insert("age", modelObject["age"].toString());
+            modelData.insert("email",modelObject["email"].toString());
+            modelData.insert("titel",modelObject["titel"].toString());
+            modelData.insert("location",modelObject["location"].toString());
+            modelData.insert("phone",modelObject["phone"].toString());
+            modelData.insert("about",modelObject["about"].toString());
+    }
+    return modelData;
 }

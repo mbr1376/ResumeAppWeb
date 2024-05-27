@@ -50,15 +50,15 @@ Item {
         spread: 0
     }
 
-    // JsonData{
-    //     id:jsonData
-    // }
-    // Component.onCompleted: {
-    //     jsonData.parse(":/resume.json","about")
-    //     // for (var i=0; i<jsonData.lenght;i++){
-    //     //     var obj = jsonData.dataSkillList[i]
-    //     //     listModel.append({"name":obj.name})
-    //     // }
-    // }
+    JsonData{
+        id:jsonData
+    }
+    Component.onCompleted: {
+        jsonData.parse(":/resume.json","about")
+        for (var i=0; i<jsonData.lenght;i++){
+            var obj = jsonData.dataSkillList[i]
+            listModel.append({"name":obj.name})
+        }
+    }
 
 }

@@ -1,6 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
-
+import api 1.0
 Item {
     width: 300
     height: 200
@@ -23,17 +23,11 @@ Item {
             anchors.margins: 5
             contentHeight:300
             model:ListModel{
-                ListElement{
-                    sourceImage: "image/phone.png"
-                    textLink: "dagergrg"
-                }
-                ListElement{
-                    sourceImage : "image/phone.png"
-                    textLink : "ertetetet"
-                }
+                id:listmodel
             }
 
             delegate: Item {
+                id:item
                 width: backlink .width
                 height: 30
                      Image {
@@ -47,14 +41,15 @@ Item {
                          anchors.leftMargin: 5
                          text: textLink
                          width: parent.width
-                         height: 30
-                         color: "#aaFFFFFF"
-                         anchors.verticalCenter: image.verticalCenter
+                         color: "#FFFFFF"
+                         anchors.verticalCenter: item.verticalCenter
+                         font.pointSize: 11
                     }
 
             }
 
         }
+
     }
     DropShadowEffect {
         source: backlink
@@ -65,5 +60,18 @@ Item {
         samples: 17
         color: "#aaFFFFFF"
         spread: 0
+    }
+   JsonData{
+        id:jsondata
+    }
+    Component.onCompleted: {
+        jsondata.parse(":/resume.json","socialNetwork")
+        for (var i =0 ; i< jsondata.lenght;i++){
+            var obj = jsondata.dataSkillList[i]
+            listmodel.append({"sourceImage":obj.image,
+                              "textLink":obj.url
+                             })
+        }
+
     }
 }

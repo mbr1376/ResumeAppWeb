@@ -40,20 +40,21 @@
                     "company" : "HooshanKavoshBorna",
                     "image" : ""
                 }
-            ],
-            "socialNetwork":[
-                {
-                    "image" : "",
-                    "url": "https://www.linkedin.com/in/mohamadbagherroodsarabi/"
-                },{
-                    "image" : "",
-                    "url":"@ad1mi2n"
-
-                },{
-                    "image" : "",
-                    "url": "mbroodsaraby76@gmail.com"
-                }
             ]
+
+        }
+    ],
+    "socialNetwork":[
+        {
+            "image" : "image/linkedin.png",
+            "url": "mohamadbagherroodsarabi"
+        },{
+            "image" : "image/telegram.png",
+            "url":"@ad1mi2n"
+
+        },{
+            "image" : "image/github.png",
+            "url": "mbr1376"
         }
     ],
     "skills":[

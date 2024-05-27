@@ -15,7 +15,7 @@ qt6_add_qml_module(content
         Information.ui.qml
         About.ui.qml
         ItemSkill.qml
-        Link.ui.qml
+        Link.qml
 
 
     RESOURCES
@@ -27,4 +27,7 @@ qt6_add_qml_module(content
         image/person.png
         image/location.png
         image/person-96.png
+        image/linkedin.png
+        image/github.png
+        image/telegram.png
 )

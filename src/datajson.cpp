@@ -79,17 +79,25 @@ void DataJson::setLenght(int value)
 
 QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
 {
-    QVariantMap modelDataInformation;
+    QVariantMap modelData;
     QVariantList finalJson;
     if (nameModel == "about"){
         foreach (const QJsonValue &value, array) {
              // Sets value from model as Json object
             QJsonObject modelObject = value.toObject();
             // information json
-            modelDataInformation =parseInformation2Variant(modelObject["information"].toArray());
-            finalJson.append(modelDataInformation);
+            modelData =parseInformation2Variant(modelObject["information"].toArray());
+            finalJson.append(modelData);
 
          }
+    }
+    else if (nameModel =="socialNetwork"){
+        foreach (const QJsonValue &value, array) {
+            QJsonObject modelObject =  value.toObject();
+            modelData.insert("image",modelObject["image"].toString());
+            modelData.insert("url",modelObject["url"].toString());
+            finalJson.append(modelData);
+        }
     }
     return finalJson;
 }
@@ -98,8 +106,8 @@ QVariantMap DataJson::parseInformation2Variant(QJsonArray array)
 {
     QVariantMap modelData;
     foreach (const QJsonValue &value, array) {
+        qDebug() << "mbr";
         QJsonObject modelObject = value.toObject();
-        qDebug()<< modelObject["name"].toString();
             modelData.insert("name", modelObject["name"].toString());
             modelData.insert("family", modelObject["family"].toString());
             modelData.insert("age", modelObject["age"].toString());

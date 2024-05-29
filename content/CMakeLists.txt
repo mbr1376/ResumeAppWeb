@@ -30,4 +30,13 @@ qt6_add_qml_module(content
         image/linkedin.png
         image/github.png
         image/telegram.png
+        image/javascript.png
+        image/python.png
+        image/c++.png
+        image/qt.png
+        image/linux.png
+        image/git.png
+        image/electronic.png
+        image/AI.png
+        image/fpga.png
 )

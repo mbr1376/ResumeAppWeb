@@ -21,7 +21,8 @@ Item {
             id: listView
             spacing: 5
             anchors.fill: backSkill
-            anchors.topMargin: 10
+            anchors.margins: 5
+            clip: true
             anchors.horizontalCenter: parent.horizontalCenter
 
             model: ListModel{
@@ -30,11 +31,12 @@ Item {
             }
 
             delegate: ItemSkill{
-                lineWidth: 3
+                lineWidth: 4
                 size: 120
                 secondaryColor: "#e0e0e0"
                 primaryColor: "#03DAC6"
                 value: valuel
+                sourceimage: image
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
@@ -54,10 +56,16 @@ Item {
         id:jsonData
     }
     Component.onCompleted: {
-        jsonData.parse(":/resume.json","about")
+        jsonData.parse(":/resume.json","skills")
         for (var i=0; i<jsonData.lenght;i++){
             var obj = jsonData.dataSkillList[i]
-            listModel.append({"name":obj.name})
+            listModel.append({"name":obj.name ,
+                              "id": obj.id,
+                              "valuel" :  obj.value ,
+                              "image" : obj.image
+
+                             })
+
         }
     }
 

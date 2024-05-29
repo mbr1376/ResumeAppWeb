@@ -99,6 +99,16 @@ QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
             finalJson.append(modelData);
         }
     }
+    else if (nameModel == "skills"){
+        foreach (const QJsonValue &value, array) {
+            QJsonObject  modelObject = value.toObject();
+            modelData.insert("id", modelObject["id"].toInt());
+            modelData.insert("nameSkill", modelObject["name"].toString());
+            modelData.insert("value", modelObject["value"].toDouble());
+            modelData.insert("image", modelObject["image"].toString());
+            finalJson.append(modelData);
+        }
+    }
     return finalJson;
 }
 

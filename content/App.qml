@@ -70,6 +70,17 @@ Window {
        anchors.right: skill.left
        anchors.rightMargin: 5
    }
+    Worker{
+        anchors.top: jobs.bottom
+        anchors.topMargin: 10
+        anchors.left: about.right
+        anchors.leftMargin: 10
+        anchors.right: skill.left
+        anchors.rightMargin: 10
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 10
+
+    }
 
    JsonData{
        id:jsonData

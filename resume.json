@@ -14,21 +14,6 @@
 
               }
             ],
-            "education" :[
-                {
-                    "education" : "Bachelor of Computer Engineering",
-                    "univesity" :  "Hamedan University of Technology",
-                    "Orientation" : "hardware",
-                    "image" : ""
-                },
-                {
-                    "education" : "Masters of Computer Engineering",
-                    "univesity" :  "Malik Ashtar University of Technology",
-                    "Orientation" : "Artificial intelligence and robotics",
-                    "image" : ""
-
-                }
-            ],
             "jobs" :[
                 {
                     "job": "developer Qt",
@@ -41,6 +26,21 @@
                     "image" : ""
                 }
             ]
+
+        }
+    ],
+    "education" :[
+        {
+            "education" : "Bachelor of Computer Engineering",
+            "univesity" :  "Hamedan University of Technology",
+            "Orientation" : "hardware",
+            "image" : ""
+        },
+        {
+            "education" : "Masters of Computer Engineering",
+            "univesity" :  "Malik Ashtar University of Technology",
+            "Orientation" : "Artificial intelligence and robotics",
+            "image" : ""
 
         }
     ],

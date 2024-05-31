@@ -16,6 +16,10 @@ qt6_add_qml_module(content
         About.ui.qml
         ItemSkill.qml
         Link.qml
+        Education.qml
+        ItemEducation.ui.qml
+        Jobs.qml
+
 
 
     RESOURCES
@@ -39,4 +43,6 @@ qt6_add_qml_module(content
         image/electronic.png
         image/AI.png
         image/fpga.png
+
+
 )

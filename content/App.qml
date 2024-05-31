@@ -53,6 +53,14 @@ Window {
        anchors.top: about.bottom
        anchors.topMargin: 10
    }
+   Education{
+       anchors.top: information.bottom
+       anchors.topMargin: 4
+       anchors.left: about.right
+       anchors.leftMargin: 5
+       anchors.right: skill.left
+       anchors.rightMargin: 5
+   }
 
    JsonData{
        id:jsonData

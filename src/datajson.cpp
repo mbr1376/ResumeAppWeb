@@ -109,6 +109,17 @@ QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
             finalJson.append(modelData);
         }
     }
+    else if (nameModel == "education"){
+        foreach (const QJsonValue &value, array) {
+            QJsonObject  modelObject = value.toObject();
+            modelData.insert("education", modelObject["education"].toString());
+            modelData.insert("univesity", modelObject["univesity"].toString());
+            modelData.insert("Orientation", modelObject["Orientation"].toString());
+            modelData.insert("image", modelObject["image"].toString());
+            finalJson.append(modelData);
+        }
+
+    }
     return finalJson;
 }
 

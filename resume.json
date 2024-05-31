@@ -13,20 +13,20 @@
                 "about" : "Hardware and software programming for more than 5 years Writer, researcher in the field of artificial intelligence, active in the fields of computers and hardware digital"
 
               }
-            ],
-            "jobs" :[
-                {
-                    "job": "developer Qt",
-                    "company" : "ViraSaz",
-                    "image" : ""
-                },
-                {
-                    "job": "developer Qt",
-                    "company" : "HooshanKavoshBorna",
-                    "image" : ""
-                }
             ]
 
+        }
+    ],
+    "jobs" :[
+        {
+            "job": "developer Qt",
+            "company" : "ViraSaz",
+            "image" : "image/noimage.png"
+        },
+        {
+            "job": "developer Qt",
+            "company" : "HooshanKavoshBorna",
+            "image" : "image/noimage.png"
         }
     ],
     "education" :[

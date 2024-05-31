@@ -120,6 +120,16 @@ QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
         }
 
     }
+    else if (nameModel == "jobs"){
+        foreach (const QJsonValue &value, array) {
+            QJsonObject  modelObject = value.toObject();
+            modelData.insert("job", modelObject["job"].toString());
+            modelData.insert("company", modelObject["company"].toString());
+            modelData.insert("image", modelObject["image"].toString());
+            finalJson.append(modelData);
+        }
+
+    }
     return finalJson;
 }
 

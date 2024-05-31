@@ -19,7 +19,7 @@ qt6_add_qml_module(content
         Education.qml
         ItemEducation.ui.qml
         Jobs.qml
-
+        ItemJobs.ui.qml
 
 
     RESOURCES
@@ -43,6 +43,9 @@ qt6_add_qml_module(content
         image/electronic.png
         image/AI.png
         image/fpga.png
+        image/noimage.png
+        QML_FILES Worker.qml
+
 
 
 )

@@ -54,10 +54,19 @@ Window {
        anchors.topMargin: 10
    }
    Education{
+       id: education
        anchors.top: information.bottom
        anchors.topMargin: 4
        anchors.left: about.right
        anchors.leftMargin: 5
+       anchors.right: jobs.left
+       anchors.rightMargin: 2.5
+
+   }
+   Jobs{
+       id:jobs
+       anchors.top: information.bottom
+       anchors.topMargin: 4
        anchors.right: skill.left
        anchors.rightMargin: 5
    }

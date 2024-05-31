@@ -22,32 +22,29 @@ Item {
             anchors.fill: parent
             clip: true
             anchors.margins: 5
-            orientation: Qt.Horizontal
-            layoutDirection: Qt.LeftToRight
-            anchors.verticalCenter: parent.verticalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
             spacing: 5
             model:ListModel{
                 id:listmodel
             }
-            delegate: ItemEducation{
-                anchors.verticalCenter: parent.verticalCenter
-                _txtL :   education
-                _txtM : univesity
-                _txtS : Orientation
-                _sourceImage : image
+            delegate: ItemJobs{
+                anchors.horizontalCenter: parent.horizontalCenter
+                _sourceImage :image
+                _compony: company
+                _job :  job
             }
+
         }
         JsonData{
             id: jsondata
         }
         Component.onCompleted: {
-            jsondata.parse(":/resume.json","education")
+            jsondata.parse(":/resume.json","jobs")
             for (var i =0 ; i< jsondata.lenght;i++){
                 var obj = jsondata.dataSkillList[i]
                 listmodel.append({"image":obj.image,
-                                  "education":obj.education,
-                                  "univesity" : obj.univesity,
-                                  "Orientation" :  obj.Orientation
+                                  "job":obj.job,
+                                  "company" : obj.company
                                  })
             }
         }

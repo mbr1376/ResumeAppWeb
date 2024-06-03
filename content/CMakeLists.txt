@@ -26,6 +26,8 @@ qt6_add_qml_module(content
 
     RESOURCES
         fonts/fonts.txt
+        fonts/RobotoSlab-ExtraBold.ttf
+        fonts//RobotoSlab-Light.ttf
         image/back.jpeg
         image/buttonItem.PNG
         image/email.png

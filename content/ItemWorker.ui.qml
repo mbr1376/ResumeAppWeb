@@ -44,14 +44,18 @@ Item {
             anchors.leftMargin: 5
             anchors.top: titel.bottom
             anchors.topMargin: 10
+            wrapMode: Text.WordWrap
+            clip: true
         }
         Text {
             id: the_employer
-            text: "Employer :   " + _employer
+            text: "Employer :" + _employer
             anchors.left: parent.left
             anchors.leftMargin: 5
             anchors.top: dat.bottom
             anchors.topMargin: 10
+            wrapMode: Text.WordWrap
+            clip: true
         }
         TextEdit {
             id: abst
@@ -65,6 +69,8 @@ Item {
             anchors.rightMargin: 5
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 50
+            wrapMode: Text.WordWrap
+            clip: true
         }
         Text {
             id: link_Text

@@ -23,34 +23,7 @@ Item {
         ListModel {
             id: dataModel
 
-            ListElement {
-                    color: "orange"
-                    text: "first"
-                }
-                ListElement {
-                    color: "lightgreen"
-                    text: "second"
-                }
-                ListElement {
-                    color: "orchid"
-                    text: "third"
-                }
-                ListElement {
-                    color: "tomato"
-                    text: "fourth"
-                }
-                ListElement {
-                    color: "skyblue"
-                    text: "fifth"
-                }
-                ListElement {
-                    color: "hotpink"
-                    text: "sixth"
-                }
-                ListElement {
-                    color: "darkseagreen"
-                    text: "seventh"
-                }
+
 
         }
 
@@ -96,7 +69,7 @@ Item {
                 PathAttribute { name: "origin"; value: itemSize }
                 PathLine {
                     x: view.width
-                    y: view.height / 2
+                   y : view.height / 2
                 }
                 PathPercent { value: 1 }
                 PathAttribute { name: "z"; value: 0 }
@@ -109,6 +82,13 @@ Item {
                 z: PathView.z
                 rotationAngle: PathView.angle
                 rotationOrigin: PathView.origin
+                _date: date
+                _abstract : abstrac
+                _titel : titel
+                _link : linksource
+                _employer :the_employer
+
+
             }
         }
     }
@@ -121,5 +101,22 @@ Item {
         samples: 17
         color: "#aaFFFFFF"
         spread: 0
+    }
+    JsonData{
+        id:jsonData
+    }
+    Component.onCompleted: {
+        jsonData.parse(":/resume.json","projects")
+        for (var i=0; i<jsonData.lenght;i++){
+            var obj = jsonData.dataSkillList[i]
+            dataModel.append({"titel":obj.titel ,
+                              "date": obj.date,
+                              "the_employer" :  obj.the_employer ,
+                              "abstrac" : obj.abstract ,
+                              "linksource" : obj.link
+
+                             })
+
+        }
     }
 }

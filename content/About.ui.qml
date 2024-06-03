@@ -1,5 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
+import ResumeApp
 
 Item {
     width: 300
@@ -45,6 +46,7 @@ Item {
                 font.pointSize: 12
                 clip: true
                 elide: Text .ElideLeft
+                font.family: Constants.largeFont.family
             }
         }
     }

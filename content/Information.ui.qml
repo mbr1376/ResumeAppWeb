@@ -40,7 +40,8 @@ Rectangle {
             color: "#FFFFFF"
             text: "Name: " + _name + "\n" + "Family: " + _Family + "\nAge: " + _age
             font.pixelSize: 14
-            font.bold: true
+            font.styleName: "ExtraBold"
+            font.family: "Roboto Slab"
         }
 
             Text {
@@ -50,6 +51,8 @@ Rectangle {
                 color: "#FFFFFF"
                 font.bold: true
                 font.pixelSize: 16
+                font.styleName: "ExtraBold"
+                font.family: "Roboto Slab"
             }
 
         ColumnLayout {

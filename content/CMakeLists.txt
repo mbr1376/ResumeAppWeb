@@ -11,7 +11,7 @@ qt6_add_qml_module(content
         Skills.qml
         Slide.ui.qml
         ScreenBack.ui.qml
-        ButtinItem.ui.qml
+
         Information.ui.qml
         About.ui.qml
         ItemSkill.qml

@@ -107,11 +107,40 @@
          "image" : "image/AI.png"
         }
     ],
+    "projects":[
+        {
+            "titel": "Inclinometer device in mining laboratory",
+            "date": "1396",
+            "the_employer" : "University of Technology mining laboratory" ,
+            "abstract": "Using QT and Raspberry Pi to control the device arms",
+            "link" : ""
+        },
+        {
+            "titel": "resource management software",
+            "date": "1397",
+            "the_employer" : "-" ,
+            "abstract": "Use Qt and  Database SQlite",
+            "link" : ""
+        },
+        {
+            "titel": "Bitcoin miner master project with fpga",
+            "date": "1397",
+            "the_employer" : "Hamedan University of Technology" ,
+            "abstract": "use FPGA spartan6 lx9, coede vhdl  and  python",
+            "link" : ""
+        },
+        {
+            "titel": "Water properties software",
+            "date": "1398",
+            "the_employer" : "Dr. Jaber Yousefi" ,
+            "abstract": "-",
+            "link" : ""
+        }
+
+   ],
     "worker":[
         {
-             "projects":[
 
-            ],
             "Books":[
 
             ],

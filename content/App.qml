@@ -97,6 +97,7 @@ Window {
            information._location = obj.location
            information._phone  =  obj.phone
            about._aboutME = obj.about
+            console.log(obj.about)
 
        }
    }

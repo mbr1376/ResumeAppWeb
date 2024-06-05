@@ -2,18 +2,20 @@ import QtQuick 6.2
 import api 1.0
 import QtQuick.Studio.Effects 1.0
 import QtQuick.Controls
+import ResumeApp
+
 Item {
     id: secenf
     Rectangle {
         id: backSkill
         anchors.fill: parent
-        color: "#121212"
+        color: Constants.backgroundColor
         radius: 10
 
         Rectangle {
             anchors.fill: parent
             radius: 10
-            color: "#FFFFFF"
+            color: Constants.fgColor
             opacity: 0.2
 
         }

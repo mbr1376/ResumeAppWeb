@@ -1,5 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
+import ResumeApp
 
 Item {
     height: 90
@@ -13,7 +14,7 @@ Item {
         anchors.fill: parent
         color: "#99121212"
         border.width: 2
-        border.color: "#121212"
+        border.color: Constants.backgroundColor
         radius: 10
         layer.effect: ShaderEffectSource{
             anchors.fill: parent
@@ -33,7 +34,7 @@ Item {
             anchors.left: parent.left
             anchors.verticalCenter: parent.verticalCenter
             radius: 100
-            color: "#BB86FC"
+            color: Constants.primery
             Image {
                 anchors.centerIn: parent
                 width: 50
@@ -46,7 +47,7 @@ Item {
             id: txtL
             clip: true
             text: _txtL
-            color: "#FFFFFF"
+            color: Constants.fgColor
             font.pointSize: 12
             anchors.left: recImage.right
             anchors.leftMargin: 10

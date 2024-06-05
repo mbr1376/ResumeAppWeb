@@ -9,7 +9,7 @@ qt6_add_qml_module(content
     QML_FILES
         App.qml
         Skills.qml
-        Slide.ui.qml
+
         ScreenBack.ui.qml
 
         Information.ui.qml
@@ -25,9 +25,6 @@ qt6_add_qml_module(content
 
 
     RESOURCES
-        fonts/fonts.txt
-        fonts/RobotoSlab-ExtraBold.ttf
-        fonts//RobotoSlab-Light.ttf
         image/back.jpeg
         image/buttonItem.PNG
         image/email.png

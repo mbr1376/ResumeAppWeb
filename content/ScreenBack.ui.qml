@@ -6,7 +6,7 @@ Item {
     Rectangle {
         id: back
         anchors.fill: parent
-        color: "#121212"
+        color: Constants.backgroundColor
 
         // SequentialAnimation{
         //     loops: Animation.Infinite
@@ -14,7 +14,7 @@ Item {
         //     PropertyAnimation{
         //         target: back
         //         property: "color"
-        //         from: "#121212"
+        //         from: Constants.backgroundColor
         //         to: "#CC121212"
         //         duration: 10000
         //     }
@@ -22,7 +22,7 @@ Item {
         //         target: back
         //         property: "color"
         //         from:"#CC121212"
-        //         to: "#121212"
+        //         to: Constants.backgroundColor
         //         duration: 10000
         //     }
         // }

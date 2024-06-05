@@ -1,4 +1,5 @@
 import QtQuick 6.2
+import ResumeApp
 
 Item {
     width: 290
@@ -19,7 +20,7 @@ Item {
         id: txtJobs
         text: _job
         font.bold: true
-        color: "#FFFFFF"
+        color: Constants.fgColor
         font.pointSize: 10
         anchors.top: image.top
         anchors.left: image.right

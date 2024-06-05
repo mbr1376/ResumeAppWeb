@@ -1,6 +1,7 @@
 import QtQuick 6.2
 import api 1.0
 import QtQuick.Studio.Effects 1.0
+import ResumeApp
 
 Item {
     width: 800
@@ -11,13 +12,13 @@ Item {
     Rectangle {
     id:backworker
     anchors.fill: parent
-    color: "#121212"
+    color: Constants.backgroundColor
     radius: 10
 
     Rectangle {
         anchors.fill: parent
         radius: 10
-        color: "#FFFFFF"
+        color: Constants.fgColor
         opacity: 0.2
     }
         ListModel {

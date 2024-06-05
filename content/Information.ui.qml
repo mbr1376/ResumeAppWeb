@@ -1,5 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Layouts
+import ResumeApp
 
 Rectangle {
     property string _name: "MohamadBagher"
@@ -11,11 +12,11 @@ Rectangle {
     property string _titel: "Developer"
     width: 800
     height: 80
-    color: "#121212"
+    color: Constants.backgroundColor
     radius: 10
     Rectangle {
         anchors.fill: parent
-        color: "#FFFFFF"
+        color: Constants.fgColor
         opacity: 0.2
         radius: 10
         border.color: "#000000"
@@ -37,18 +38,17 @@ Rectangle {
         }
         Text {
             id: nameFamily
-            color: "#FFFFFF"
+            color: Constants.fgColor
             text: "Name: " + _name + "\n" + "Family: " + _Family + "\nAge: " + _age
             font.pixelSize: 14
-            font.styleName: "ExtraBold"
-            font.family: "Roboto Slab"
+
         }
 
             Text {
                 anchors.centerIn: parent.Center
                 id: titel
                 text: _titel
-                color: "#FFFFFF"
+                color: Constants.fgColor
                 font.bold: true
                 font.pixelSize: 16
                 font.styleName: "ExtraBold"
@@ -72,7 +72,7 @@ Rectangle {
                     source: "image/email.png"
                 }
                 Text {
-                    color: "#FFFFFF"
+                    color: Constants.fgColor
                     text: _email
                     font.pixelSize: 12
                     font.bold: false
@@ -87,7 +87,7 @@ Rectangle {
                     source: "image/phone.png"
                 }
                 Text {
-                    color: "#FFFFFF"
+                    color: Constants.fgColor
                     text: _phone
                     font.pixelSize: 12
                     font.bold: false
@@ -102,7 +102,7 @@ Rectangle {
                     source: "image/location.png"
                 }
                 Text {
-                    color: "#FFFFFF"
+                    color: Constants.fgColor
                     text: _location
                     font.pixelSize: 12
                     font.bold: false

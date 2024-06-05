@@ -1,5 +1,6 @@
 import QtQuick 6.2
 
+import ResumeApp
 
 Item {
     id: root

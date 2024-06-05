@@ -1,6 +1,8 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
 import api 1.0
+import ResumeApp
+
 Item {
     width: 300
     height: 200
@@ -8,13 +10,13 @@ Item {
     Rectangle {
         id: backlink
         anchors.fill: parent
-        color: "#121212"
+        color: Constants.backgroundColor
         radius: 10
 
         Rectangle {
             anchors.fill: parent
             radius: 10
-            color: "#FFFFFF"
+            color: Constants.fgColor
             opacity: 0.2
         }
         ListView{
@@ -27,7 +29,7 @@ Item {
             }
 
             delegate: Item {
-                id:item
+                id:delegate
                 width: backlink .width
                 height: 30
                      Image {
@@ -41,9 +43,10 @@ Item {
                          anchors.leftMargin: 5
                          text: textLink
                          width: parent.width
-                         color: "#FFFFFF"
-                         anchors.verticalCenter: item.verticalCenter
+                         color: Constants.fgColor
+                         anchors.verticalCenter: delegate.verticalCenter
                          font.pointSize: 11
+                         font.family: Constants.font.family
                     }
 
             }

@@ -6,16 +6,18 @@ Item {
     width: 300
     height: 400
     property string _aboutME: "text"
+
+
     Rectangle {
         id: backAbout
         anchors.fill: parent
-        color: "#121212"
+        color: Constants.backgroundColor
         radius: 10
 
         Rectangle {
             anchors.fill: parent
             radius: 10
-            color: "#FFFFFF"
+            color: Constants.fgColor
             opacity: 0.2
         }
         Image {
@@ -41,12 +43,11 @@ Item {
                 anchors.fill: parent
                 anchors.margins: 7
                 text: _aboutME
-                color: "#FFFFFF"
+                color: Constants.fgColor
                 wrapMode: Text.WordWrap
                 font.pointSize: 12
                 clip: true
                 elide: Text .ElideLeft
-                font.family: Constants.largeFont.family
             }
         }
     }

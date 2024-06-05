@@ -1,5 +1,6 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
+import ResumeApp
 
 Item {
     width: 600
@@ -15,9 +16,9 @@ Item {
     Rectangle {
         id: back
         anchors.fill: parent
-        color: "#BB86FC"
+        color: Constants.primery
         border.width: 2
-        border.color: "#121212"
+        border.color: Constants.backgroundColor
         radius: 10
         transform: Rotation {
             axis {

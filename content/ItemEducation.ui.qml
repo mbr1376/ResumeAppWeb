@@ -48,7 +48,8 @@ Item {
             clip: true
             text: _txtL
             color: Constants.fgColor
-            font.pointSize: 12
+            font.pixelSize: 14
+            font.family: Constants.boldFont.family
             anchors.left: recImage.right
             anchors.leftMargin: 10
             anchors.top: recImage.top
@@ -58,7 +59,8 @@ Item {
             text: _txtM
             clip: true
             color: "#AAFFFFFF"
-            font.pointSize: 11
+            font.pixelSize: 12
+            font.family: Constants.font.family
             anchors.left: recImage.right
             anchors.top: txtL.bottom
             anchors.topMargin: 5
@@ -69,7 +71,8 @@ Item {
             text: _txtS
             clip: true
             color: "#AAFFFFFF"
-            font.pointSize: 9
+            font.pixelSize: 10
+            font.family: Constants.font.family
             anchors.left: recImage.right
             anchors.top: txtM.bottom
             anchors.topMargin: 3

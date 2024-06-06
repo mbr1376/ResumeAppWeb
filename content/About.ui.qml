@@ -45,7 +45,8 @@ Item {
                 text: _aboutME
                 color: Constants.fgColor
                 wrapMode: Text.WordWrap
-                font.pointSize: 12
+                font.pixelSize: 14
+                font.family: Constants.font.family
                 clip: true
                 elide: Text .ElideLeft
             }

@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>resume.json</file>
+        <file>RobotoSlab-ExtraBold.ttf</file>
+        <file>RobotoSlab-Light.ttf</file>
     </qresource>
 </RCC>

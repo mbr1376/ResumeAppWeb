@@ -27,7 +27,8 @@ Item {
     Text {
 
         text: parseInt(value * 100) + "%"
-
+        font.pixelSize: 14
+        font.family: Constants.boldFont.family
         anchors.top: image.bottom
         anchors.topMargin: 1
         anchors.horizontalCenter: image.horizontalCenter

@@ -35,59 +35,72 @@ Item {
             anchors.top: parent.top
             anchors.topMargin: 10
             anchors.horizontalCenter: parent.horizontalCenter
-            font.bold: true
-            font.pointSize: 14
+            font.pixelSize: 16
+            font.family: Constants.boldFont.family
         }
         Text {
             id: dat
-            text: "Date :   " + _date
+            text: "Date: " + _date
             anchors.left: parent.left
             anchors.leftMargin: 5
             anchors.top: titel.bottom
-            anchors.topMargin: 10
+            anchors.topMargin: 20
             wrapMode: Text.WordWrap
             clip: true
+            font.pixelSize: 12
+            font.family: Constants.font.family
         }
         Text {
             id: the_employer
-            text: "Employer :" + _employer
+            text: "Employer: " + _employer
             anchors.left: parent.left
             anchors.leftMargin: 5
             anchors.top: dat.bottom
             anchors.topMargin: 10
             wrapMode: Text.WordWrap
             clip: true
-        }
-        TextEdit {
-            id: abst
-            anchors.left: parent.left
-            anchors.leftMargin: 5
-            anchors.top: the_employer.bottom
-            anchors.topMargin: 20
-            readOnly: true
-            text: _abstract
-            anchors.right: parent.right
-            anchors.rightMargin: 5
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 50
-            wrapMode: Text.WordWrap
-            clip: true
+            font.pixelSize: 12
+            font.family: Constants.font.family
         }
         Text {
             id: link_Text
-            text: "Link: " + '<html><style type="text/css"></style><a href='
-                  + _link + 'google</a></html>'
+            text: "Link: " + _link
             // onLinkActivated: Qt.openUrlExternally(link)
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 10
+            anchors.top: the_employer.bottom
+            anchors.topMargin: 10
             anchors.left: parent.left
             anchors.leftMargin: 5
+            font.pixelSize: 12
+            font.family: Constants.font.family
 
             MouseArea {
                 id: mouseArea
                 anchors.fill: parent
                 acceptedButtons: Qt.NoButton // Don't eat the mouse clicks
                 cursorShape: Qt.PointingHandCursor
+            }
+        }
+        Rectangle {
+            anchors.left: parent.left
+            anchors.leftMargin: 5
+            anchors.top: link_Text.bottom
+            anchors.topMargin: 20
+            anchors.right: parent.right
+            anchors.rightMargin: 5
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 50
+            color: "#88121212"
+            radius: 3
+            TextEdit {
+                id: abst
+                anchors.fill: parent
+                readOnly: true
+                text: _abstract
+                anchors.margins: 10
+                wrapMode: Text.WordWrap
+                clip: true
+                font.pixelSize: 12
+                font.family: Constants.font.family
             }
         }
     }

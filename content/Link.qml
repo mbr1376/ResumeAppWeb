@@ -46,7 +46,7 @@ Item {
                          color: Constants.fgColor
                          anchors.verticalCenter: delegate.verticalCenter
                          font.pointSize: 11
-                         font.family: Constants.font.family
+                         font.family: Constants.boldFont.family
                     }
 
             }

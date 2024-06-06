@@ -10,8 +10,8 @@ QtObject {
 
 
     /* Edit this comment to add your custom font */
-    readonly property FontLoader robotoSlab: FontLoader{ source:  "qrc:/RobotoSlab-ExtraBold.ttf"}
-    readonly property FontLoader robotoSlab_bold: FontLoader{ source:  "qrc:/RobotoSlab-ExtraBold.ttf"}
+    readonly property FontLoader robotoSlab: FontLoader{ source: "qrc:/qt/qml/content/fonts/RobotoSlab-Light.ttf"}
+    readonly property FontLoader robotoSlab_bold: FontLoader{ source:  "qrc:/qt/qml/content/fonts/RobotoSlab-ExtraBold.ttf"}
 
     readonly property font font: Qt.font({
                                              family: robotoSlab.name,

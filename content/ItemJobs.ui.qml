@@ -19,16 +19,17 @@ Item {
     Text {
         id: txtJobs
         text: _job
-        font.bold: true
+        font.pixelSize: 12
+        font.family: Constants.boldFont.family
         color: Constants.fgColor
-        font.pointSize: 10
         anchors.top: image.top
         anchors.left: image.right
         anchors.leftMargin: 10
     }
     Text {
         text: _compony
-        font.pointSize: 9
+        font.pixelSize: 10
+        font.family: Constants.font.family
         color: "#AAFFFFFF"
         anchors.top: txtJobs.bottom
         anchors.topMargin: 1

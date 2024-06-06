@@ -16,4 +16,5 @@ qt6_add_qml_module(ResumeApp
         DirectoryFontLoader.qml
         EventListModel.qml
         EventListSimulator.qml
+
 )

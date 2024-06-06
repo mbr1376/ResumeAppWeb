@@ -40,7 +40,8 @@ Rectangle {
             id: nameFamily
             color: Constants.fgColor
             text: "Name: " + _name + "\n" + "Family: " + _Family + "\nAge: " + _age
-            font.pixelSize: 14
+            font.pixelSize: 13
+            font.family: Constants.font.family
 
         }
 
@@ -49,10 +50,8 @@ Rectangle {
                 id: titel
                 text: _titel
                 color: Constants.fgColor
-                font.bold: true
-                font.pixelSize: 16
-                font.styleName: "ExtraBold"
-                font.family: "Roboto Slab"
+                font.pixelSize: Constants.boldFont.pixelSize
+                font.family: Constants.boldFont.family
             }
 
         ColumnLayout {
@@ -75,7 +74,7 @@ Rectangle {
                     color: Constants.fgColor
                     text: _email
                     font.pixelSize: 12
-                    font.bold: false
+                    font.family: Constants.font.family
                 }
             }
             RowLayout {
@@ -90,7 +89,7 @@ Rectangle {
                     color: Constants.fgColor
                     text: _phone
                     font.pixelSize: 12
-                    font.bold: false
+                    font.family: Constants.font.family
                 }
             }
             RowLayout {
@@ -105,7 +104,7 @@ Rectangle {
                     color: Constants.fgColor
                     text: _location
                     font.pixelSize: 12
-                    font.bold: false
+                    font.family: Constants.font.family
                 }
             }
         }

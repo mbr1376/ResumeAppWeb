@@ -23,6 +23,8 @@ qt_add_resources(ResumeAppApp "configuration"
     FILES
         qtquickcontrols2.conf
         resume.json
+        content/fonts/RobotoSlab-ExtraBold.ttf
+        content/fonts/RobotoSlab-Light.ttf
 
 )
 

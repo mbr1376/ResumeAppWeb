@@ -22,6 +22,8 @@ qt6_add_qml_module(content
         ItemJobs.ui.qml
         Worker.qml
         ItemWorker.ui.qml
+        SlideShow.qml
+        Evidence.qml
 
 
     RESOURCES
@@ -47,6 +49,9 @@ qt6_add_qml_module(content
         image/AI.png
         image/fpga.png
         image/noimage.png
+        image/Certificate-MohammadbaqerRoudsarabi.jpg
+        image/Certificate_MohammadbaqerRoudsarabi.jpg
+
 
 
 

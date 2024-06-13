@@ -26,6 +26,7 @@ QtObject {
     readonly property color fgColor: "#FFFFFF"
     readonly property color primery: "#BB86FC"
     readonly property color secondary: "#03DAC6"
+    readonly property color error: "#CF6679"
 
 
     property StudioApplication application: StudioApplication {

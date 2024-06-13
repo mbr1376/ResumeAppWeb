@@ -142,6 +142,14 @@ QVariantList DataJson::json2Variant(QJsonArray array, QString nameModel)
         }
 
     }
+    else if (nameModel == "Evidence"){
+        foreach (const QJsonValue &value, array) {
+            QJsonObject  modelObject = value.toObject();
+            modelData.insert("image", modelObject["image"].toString());
+            finalJson.append(modelData);
+        }
+
+    }
     return finalJson;
 }
 

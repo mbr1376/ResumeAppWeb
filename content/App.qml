@@ -70,7 +70,7 @@ Window {
        anchors.right: skill.left
        anchors.rightMargin: 5
    }
-    Worker{
+    SlideShow{
         anchors.top: jobs.bottom
         anchors.topMargin: 10
         anchors.left: about.right
@@ -97,7 +97,6 @@ Window {
            information._location = obj.location
            information._phone  =  obj.phone
            about._aboutME = obj.about
-            console.log(obj.about)
 
        }
    }

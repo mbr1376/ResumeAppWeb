@@ -1,12 +1,12 @@
 import QtQuick 6.2
 import QtQuick.Studio.Effects 1.0
 import ResumeApp
+import QtQuick.Controls
 
 Item {
     width: 300
     height: 400
     property string _aboutME: "text"
-
 
     Rectangle {
         id: backAbout
@@ -48,7 +48,7 @@ Item {
                 font.pixelSize: 14
                 font.family: Constants.font.family
                 clip: true
-                elide: Text .ElideLeft
+                elide: Text.ElideLeft
             }
         }
     }

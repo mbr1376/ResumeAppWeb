@@ -3,14 +3,12 @@
         {
             "information":[
               {
-                "name" : "MohamadBagher",
-                "family" : "Roodsarabi",
-                "age" : "26",
-                "titel" : "develpoer Software and hardware",
-                "email" : "mbroodsraby76@gmail.com",
-                "phone" : "09398831591" ,
-                "location" : "Tehran",
-                "about" : "Hardware and software programming for more than 5 years Writer, researcher in the field of artificial intelligence, active in the fields of computers and hardware digital"
+                "name" : "",
+                "family" : "",
+                "age" : "",
+                "phone" : "" ,
+                "location" : "",
+                "about" : " "
 
               }
             ]
@@ -19,42 +17,42 @@
     ],
     "jobs" :[
         {
-            "job": "developer Qt",
-            "company" : "ViraSaz",
-            "image" : "image/noimage.png"
+            "job": "",
+            "company" : "",
+            "image" : ""
         },
         {
-            "job": "developer Qt",
-            "company" : "HooshanKavoshBorna",
-            "image" : "image/noimage.png"
+            "job": "",
+            "company" : "",
+            "image" : ""
         }
     ],
     "education" :[
         {
-            "education" : "Bachelor of Computer Engineering",
-            "univesity" :  "Hamedan University of Technology",
-            "Orientation" : "hardware",
+            "education" : "",
+            "univesity" :  "",
+            "Orientation" : "",
             "image" : ""
         },
         {
-            "education" : "Masters of Computer Engineering",
-            "univesity" :  "Malik Ashtar University of Technology",
-            "Orientation" : "Artificial intelligence and robotics",
+            "education" : "",
+            "univesity" :  "",
+            "Orientation" : "",
             "image" : ""
 
         }
     ],
     "socialNetwork":[
         {
-            "image" : "image/linkedin.png",
-            "url": "mohamadbagherroodsarabi"
+            "image" : "",
+            "url": ""
         },{
-            "image" : "image/telegram.png",
-            "url":"@ad1mi2n"
+            "image" : "",
+            "url":""
 
         },{
-            "image" : "image/github.png",
-            "url": "mbr1376"
+            "image" : "",
+            "url": ""
         }
     ],
     "skills":[
@@ -109,46 +107,41 @@
     ],
     "projects":[
         {
-            "titel": "Inclinometer device in mining laboratory",
-            "date": "1396",
-            "the_employer" : "University of Technology mining laboratory" ,
-            "abstract": "Using QT and Raspberry Pi to control the device arms",
+            "titel": "",
+            "date": "",
+            "the_employer" : "" ,
+            "abstract": "",
             "link" : ""
         },
         {
-            "titel": "resource management software",
-            "date": "1397",
-            "the_employer" : "-" ,
-            "abstract": "Use Qt and  Database SQlite",
+            "titel": "",
+            "date": "",
+            "the_employer" : "" ,
+            "abstract": "",
             "link" : ""
         },
         {
-            "titel": "Bitcoin miner master project with fpga",
-            "date": "1397",
-            "the_employer" : "Hamedan University of Technology" ,
-            "abstract": "use FPGA spartan6 lx9, coede vhdl  and  python",
+            "titel": "",
+            "date": "",
+            "the_employer" : "" ,
+            "abstract": "",
             "link" : ""
         },
         {
-            "titel": "Water properties software",
-            "date": "1398",
-            "the_employer" : "Dr. Jaber Yousefi" ,
-            "abstract": "-",
+            "titel": "",
+            "date": "",
             "link" : ""
         }
 
    ],
-    "worker":[
-        {
+   "Evidence":[
+       {
+           "image":""
+       },
+       {
+           "image" : ""
+       }
 
-            "Books":[
-
-            ],
-            "paper":[
-
-            ]
-
-        }
-    ]
+   ]
 
 }
